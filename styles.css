@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Calculator container */
+.calculator {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.3);
+  width: 320px;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+/* Display */
+.display {
+  width: 100%;
+  height: 70px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  text-align: right;
+  padding: 15px;
+  font-size: 2rem;
+  color: #222;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+/* Buttons grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* Buttons */
+button {
+  height: 60px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.25);
+  color: #222;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.45);
+  transform: translateY(-3px);
+}
+
+/* Operators */
+.operator {
+  background: linear-gradient(135deg, #ff9800, #ffc107);
+  color: #fff;
+  font-weight: 600;
+}
+
+.operator:hover {
+  background: linear-gradient(135deg, #ffa726, #ffd54f);
+}
+
+/* Equal */
+.equal {
+  background: linear-gradient(135deg, #4caf50, #81c784);
+  color: white;
+  grid-column: span 2;
+  font-weight: 600;
+}
+
+.equal:hover {
+  background: linear-gradient(135deg, #66bb6a, #a5d6a7);
+}
+
+/* Clear */
+.clear {
+  background: linear-gradient(135deg, #f44336, #ef9a9a);
+  color: white;
+  font-weight: 600;
+}
+
+.clear:hover {
+  background: linear-gradient(135deg, #e53935, #ef5350);
+}
+
+/* Backspace */
+.back {
+  background: linear-gradient(135deg, #607d8b, #90a4ae);
+  color: white;
+}
+
+.back:hover {
+  background: linear-gradient(135deg, #78909c, #b0bec5);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
